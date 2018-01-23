@@ -12,6 +12,8 @@ public class CharacterCreator {
 		// TODO: use for testing, and ultimately for creating a character
 		// Here we just return null, which will not be very interesting, so write
 		// some code to create a charcter and return the root node.
-		return null;
+		FreeJoint testRoot = new FreeJoint( "testRoot" );
+		
+		return testRoot;
 	}
 }

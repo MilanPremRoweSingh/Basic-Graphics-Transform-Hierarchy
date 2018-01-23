@@ -128,7 +128,7 @@ public class A1App implements GLEventListener {
         // shiny plastic)
         //final float[] cyan = new float[] {0,1,1,1}; // R G B A
         //final float[] magenta = new float[] {1,0,1,1}; // R G B A
-        final float[] white = new float[] {1,1,1,1}; // R G B A
+        final float[] white = new float[] {1,0,1,1}; // R G B A
         //gl.glMaterialfv( GL.GL_FRONT, GL2.GL_AMBIENT_AND_DIFFUSE, cyan, 0 );
         //gl.glMaterialfv( GL.GL_BACK, GL2.GL_AMBIENT_AND_DIFFUSE, magenta, 0 );
         gl.glMaterialfv( GL.GL_FRONT_AND_BACK, GL2.GL_SPECULAR, white, 0 );
@@ -137,7 +137,9 @@ public class A1App implements GLEventListener {
         // by using a glColor call
         gl.glEnable( GL2.GL_COLOR_MATERIAL);
         // This call not only sets the drawing colour but will make
-        gl.glColor3f(1, 0, 0);        
+        gl.glColor3f(1, 0, 0);  
+             
+                
      }
         
     @Override

@@ -27,9 +27,11 @@ public class FreeJoint extends DAGNode {
 	@Override
 	public void display(GLAutoDrawable drawable) {
 		GL2 gl = drawable.getGL().getGL2();
-
+		glut.glutSolidCube(1);
+		//gl.glRotated(0.5,0.5,0.5,0.5);
 		// TODO: implement the rest of this method
-	
+		super.display(drawable);
+		
 	}
 
 	
