@@ -1,3 +1,4 @@
+//Milan Singh 260654803
 package comp557.a1;
 
 import com.jogamp.opengl.GL2;
@@ -14,7 +15,8 @@ public class FreeJoint extends DAGNode {
 	DoubleParameter ry;
 	DoubleParameter rz;
 		
-	public FreeJoint( String name ) {
+	public FreeJoint( String name ) 
+	{
 		super(name);
 		dofs.add( tx = new DoubleParameter( name+" tx", 0, -2, 2 ) );		
 		dofs.add( ty = new DoubleParameter( name+" ty", 0, -2, 2 ) );
@@ -27,11 +29,18 @@ public class FreeJoint extends DAGNode {
 	@Override
 	public void display(GLAutoDrawable drawable) {
 		GL2 gl = drawable.getGL().getGL2();
-		glut.glutSolidCube(1);
-		//gl.glRotated(0.5,0.5,0.5,0.5);
-		// TODO: implement the rest of this method
-		super.display(drawable);
 		
+		gl.glTranslatef( tx.getFloatValue(), ty.getFloatValue(), tz.getFloatValue() );
+		
+        gl.glRotatef( rx.getFloatValue(), 1, 0, 0);
+        gl.glRotatef( ry.getFloatValue(), 0, 1, 0);
+        gl.glRotatef( rz.getFloatValue(), 0, 0, 1);
+        
+        gl.glColor3f( 0.0f, 0.0f, 1.0f );
+        glut.glutSolidSphere( 0.85f, 10, 10);
+
+		super.display(drawable);
+
 	}
 
 	
