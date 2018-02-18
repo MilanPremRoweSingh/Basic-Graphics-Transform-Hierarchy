@@ -10,12 +10,14 @@ public class HingeJoint extends DAGNode {
 	DoubleParameter angle;
 	float tx, ty, tz;
 	float cr, cg, cb;
+	float ax, ay, az; //Axis for rotation
 	
 	
 	HingeJoint( String name,
 				float _tx, float _ty, float _tz,
 				float _cr, float _cg, float _cb,
-				float minAngle, float maxAngle )
+				float minAngle, float maxAngle,
+				float _ax, float _ay, float _az )
 	{
 		super(name);
 		
@@ -26,7 +28,11 @@ public class HingeJoint extends DAGNode {
 		this.cr	= _cr;
 		this.cg	= _cg;
 		this.cb	= _cb;
-	
+
+		this.ax	= _ax;
+		this.ay	= _ay;
+		this.az	= _az;
+		
 		dofs.add( angle = new DoubleParameter( name+" Angle", 1, minAngle, maxAngle ) );	
 	}
 	
@@ -40,7 +46,7 @@ public class HingeJoint extends DAGNode {
 		
 		gl.glTranslatef( tx, ty, tz );
 		
-        gl.glRotatef( angle.getFloatValue(), 1, 0, 0);
+        gl.glRotatef( angle.getFloatValue(), ax, ay, az);
                 
         // Draw something interesting
         glut.glutSolidSphere( 0.25f, 10, 10 );

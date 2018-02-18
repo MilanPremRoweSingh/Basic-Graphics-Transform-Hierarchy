@@ -30,7 +30,7 @@ public class CharacterCreator {
  		GeometryLimb lUpperArm = new GeometryLimb( "leftUpperArm", 1, 0, 0,  0.35f, 0.7f, 5, 5 );
  		lShoulder.add( lUpperArm );
  		
- 		HingeJoint lElbow = new HingeJoint( "leftElbow", 0, 0, 0.75f, 1, 0, 0, -135, 0 );
+ 		HingeJoint lElbow = new HingeJoint( "leftElbow", 0, 0, 0.75f, 1, 0, 0, -135, 0, 1, 0, 0 );
  		lUpperArm.add( lElbow );
 
  		GeometryLimb lForearm = new GeometryLimb( "leftForearm", 1, 0, 0, 0.35f, 0.7f, 5, 5 );
@@ -46,7 +46,7 @@ public class CharacterCreator {
  		GeometryLimb rUpperArm = new GeometryLimb( "rightUpperArm", 1, 0, 0, 0.35f, 0.7f, 5, 5 );
  		rShoulder.add( rUpperArm );
 		
- 		HingeJoint rElbow = new HingeJoint( "rightElbow", 0, 0, 0.75f, 1, 0, 0, -135, 0 );
+ 		HingeJoint rElbow = new HingeJoint( "rightElbow", 0, 0, 0.75f, 1, 0, 0, -135, 0, 1, 0, 0 );
  		rUpperArm.add( rElbow );
 
  		GeometryLimb rForearm = new GeometryLimb( "rightForearm", 1, 0, 0, 0.35f, 0.7f, 5, 5 );
@@ -62,7 +62,7 @@ public class CharacterCreator {
  		GeometryLimb lThigh = new GeometryLimb( "leftThigh", 0, 0, 1,  0.4f, 0.5f, 5, 5 );
  		lHipJoint.add( lThigh );
  		
- 		HingeJoint lKnee = new HingeJoint( "leftKnee", 0, 0, 0.45f, 0, 0, 1, 0, 135 );
+ 		HingeJoint lKnee = new HingeJoint( "leftKnee", 0, 0, 0.45f, 0, 0, 1, 0, 135, 1, 0 ,0 );
  		lThigh.add( lKnee );
 
  		GeometryLimb lShin = new GeometryLimb( "leftShin", 0, 0, 1, 0.4f, 0.5f, 5, 5 );
@@ -78,7 +78,7 @@ public class CharacterCreator {
  		GeometryLimb rThigh = new GeometryLimb( "rightThigh", 0, 0, 1,  0.4f, 0.5f, 5, 5 );
  		rHipJoint.add( rThigh );
  		
- 		HingeJoint rKnee = new HingeJoint( "rightKnee", 0, 0, 0.45f, 0, 0, 1, 0, 135 );
+ 		HingeJoint rKnee = new HingeJoint( "rightKnee", 0, 0, 0.45f, 0, 0, 1, 0, 135, 1, 0, 0 );
  		rThigh.add( rKnee );
 
  		GeometryLimb rShin = new GeometryLimb( "rightShin", 0, 0, 1, 0.4f, 0.5f, 5, 5 );
